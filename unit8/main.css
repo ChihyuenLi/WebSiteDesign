@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+    border-width:30px 10px;
+
+    border-style: solid;
+    border-color: black;
+}
+p{
+    max-width: 1000px;
+}
+.panel{
+    max-width: 30%;   
+    display: inline-block;
+    border:0;
+    margin:10px;
+}
+img{
+   max-width:100%;
+}
+footer{
+    color:#aaa;
+    font-size: 14px;
+}

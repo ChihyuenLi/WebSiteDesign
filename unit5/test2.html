@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document
+</title>
+
+</head>
+<body>
+<style>
+  @charset "utf-8";
+/* CSS Document */
+body {
+	background: #f8f8f8;
+	text-align: left;
+	font-family: "微软雅黑";
+	color: #555;
+	font-size: 16px;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+	color: #555;
+}
+.header {
+	margin: 0 auto;
+	padding-bottom: 5px;
+	background: #f8f8f8 url(../images/pattern.jpg) left top repeat;
+	border-top: 4px solid #eb4141;
+	-moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.8);
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.8);
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,.8);/*设置容器的阴影效果，并且指定阴影的颜色和透明度*/
+}
+.container {
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.container:before, .container:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.container:after {
+	clear: both;
+}/*使用伪类的方式清除浮动*/
+.logo {
+	width: 400px;
+}
+.logo h1 {
+	padding-left: 50px;
+	font-family: "微软雅黑";
+	font-size: 36px;
+	font-weight: 400;
+}
+.register-container {
+	margin-top: 50px;
+}
+.iphone {
+	text-align: right;
+	float: left;
+}
+.iphone img {
+	margin-right: 10px;
+}
+.register {
+	float: left;
+	padding-top: 100px;
+	width: 460px;
+}
+.register form {
+	padding: 20px 50px 40px 50px;
+	background: #f8f8f8 url(../images/pattern.jpg) left top repeat;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+}
+.register form h2 {
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	background: url(../images/pencil.png) 35px 6px no-repeat;
+	border-bottom: 2px dotted #bbb;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+}
+.register form input {
+	width: 95%;
+	height: 30px;
+	background: #fcfcfc;
+	border: 1px solid #ddd;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.1) inset;
+	color: #888;
+	font-size: 16px;
+	display: block;
+}
+.register form label {
+	margin: 7px 0 10px 5px;
+	font-size: 16px;
+	text-align: left;
+}
+.register form button {
+	display: block;
+	cursor: pointer;
+	width: 95%;
+	height: 42px;
+	margin-top: 25px;
+	padding: 0;
+	background: #eb4141;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 0;
+	-moz-box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+	-webkit-box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+	box-shadow: 0 15px 30px 0 rgba(255,255,255,.1) inset;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #fff;
+}
+#footer {
+	text-align: center;
+}
+
+  </style>
+  <header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1><a href="">Yuze App 注册</a></h1>
+    </div>
+  </div>
+</header>
+<div class="register-container container">
+  <div class="iphone"> <img src="test2.png" width="406" height="720"></div>
+  <div class="register">
+    <form action="" method="post">
+      <h2>Yuze APP注册</h2>
+      <label for="username">用户名</label>
+      <input type="text" id="username" name="usertname" placeholder="请在这里输入用户名">
+      <label for="tel">手机号码</label>
+      <input type="text" id="tel" name="tel" placeholder="请在这里输入手机号码">
+      <label for="email">邮箱地址</label>
+      <input type="text" id="email" name="email" placeholder="请在这里输入邮箱地址">
+      <label for="password">密码</label>
+      <input type="text" id="password" name="password" placeholder="请在这里输入登录密码">
+      <label for="passwordagain">确认密码</label>
+      <input type="password" id="passwordagain" name="passwordagain" placeholder="请再次输入登录密码">
+      <button type="submit">注册</button>
+    </form>
+  </div>
+</div>
+<footer id="footer">201151217李致远
+</footer>
+</body>
+</html>

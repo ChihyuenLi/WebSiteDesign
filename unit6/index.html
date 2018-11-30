@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            width: 432px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .mod .hd .tabs {
+            float: left;
+        }
+
+        .tlist .sub {
+            width: 49px;
+            display: inline-block;
+            font-family: "Simsun";
+            color: #e5e5e5;
+            font-size: 14px;
+            vertical-align: top;
+            text-align: right;
+            position: relative;
+        }
+
+        .tabs .current {
+            position: relative;
+            border-top: 2px solid #07d;
+            margin-top: -1px;
+            color: #07d;
+            line-height: 44px;
+            font-weight: bold;
+        }
+
+        .mod .hd {
+            height: 51px;
+            border-top: 1px solid #eee;
+            clear: both;
+        }
+
+        .mod .hd .tabs a {
+            float: left;
+            font-size: 18px;
+            line-height: 46px;
+            color: #999;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 30px;
+        }
+
+        .mod .hd .tabs .current {
+            position: relative;
+            margin-top: -1px;
+            color: #07d;
+            line-height: 44px;
+            font-weight: bold;
+        }
+
+        .tlist .sub a {
+            color: #aaa;
+            font-family: Microsoft Yahei, tahoma, HELVETICA;
+            float: left;
+            width: 42px;
+            padding-right: 7px;
+            position: absolute;
+            left: 0;
+            text-align: center;
+        }
+
+        .tlist .u-pubtime {
+            float: right;
+            color: #aaa;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .tlist li {
+            height: 36px;
+            line-height: 36px;
+        }
+
+        .tlist {
+            margin: 0;
+            padding: 0;
+        }
+
+        i {
+            font-style: normal;
+        }
+    </style>
+    <div class="mod chaNews">
+        <div class="hd">
+            <div class="tabs">
+                <a href="*" onmouseover="mouseOver(this)" class="current">全国行情</a>
+                <a href="*" onmouseover="mouseOver(this)">北京</a>
+                <a href="*" onmouseover="mouseOver(this)">上海</a>
+                <a href="*" onmouseover="mouseOver(this)">广州</a>
+                <a href="*" onmouseover="mouseOver(this)">深圳</a>
+                <a href="*" onmouseover="mouseOver(this)">江苏</a>
+            </div>
+        </div>
+        <div class="pannel">
+            <ul class="tlist">
+                <li>
+                    <i class="sub">
+                    <a href="">行情 </a>
+                    |
+                    </i>
+                    <a href="">3D高清DLP投影技术 NEC CR3115X促4999起</a>
+                    <i class="u-pubtime">11.16</i>
+                </li>
+                <li>
+                    <i class="sub">
+                    <a href="">行情</a>
+                    |
+                    </i>
+                    <a href="">蓝光3D强散热NEC CR54000WL报价6500元</a>
+                    <i class="u-pubtime">11.16</i>
+                </li>
+                <li>
+                    <i class="sub">
+                    <a href="">行情</a> 
+                    |
+                    </i>
+                    <a href="">3D高清DLP投影技术NEC促4999起</a>
+                    <i class="u-pubtime">11.16</i>
+                </li>
+                <li>
+                    <i class="sub">
+                    <a href="">行情</a>
+                    |
+                    </i>
+                    <a href="">3D高清DLP投影技术NEC促4999起</a>
+                    <i class="u-pubtime">11.16</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    function mouseOver(whichA)
+    {
+    var tar= document.getElementsByClassName('current');
+    var tar1=tar[0];
+    tar1.classList.remove('current');
+    whichA.classList.add('current');
+    }
+    </script>
+</body>
+
+</html>

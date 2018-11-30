@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>201151217李致远</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="1.bmp" alt="*">
+        </div>
+        <div class="rf">
+            <a href=""> <img class="icon" src="wechat.bmp"></img></a>
+            <a href=""> <img class="icon" src="sina.bmp"></img></a>
+            <a href=""> <img class="icon" src="qq.bmp"></img></a>
+            <input type="text" name="input" id="search" value="搜索您需要的商品">
+            <button>搜索</button>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <a class="item">首页</a>
+            <a class="item">关于新巢</a>
+            <a class="item">新闻中心</a>
+            <a class="item">项目展示</a>
+            <a class="item">新巢会</a>
+            <a class="item">新巢服务</a>
+            <a class="item">人力资源</a>
+            <a class="item">商务合作</a>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="list" style="left:-1200px">
+            <img src="1.jpg" alt="1" />
+            <img src="2.jpg" alt="2" />
+            <img src="3.jpg" alt="3" />
+            <img src="4.jpg" alt="4" />
+            <img src="1.jpg" alt="1" />
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+        </div>
+        <a href="javascript:;" class="arrow" id="pre"></a>
+        <a href="javascript:;" class="arrow" id="next"></a>
+    </div>
+
+    <div class="panel">
+        <div class="video">
+            <div class="item-head">
+                <h3> <img src="icon.gif" alt="" width="20" height="20"><a href="#">视频 </a>
+                    <i>Vedio</i>
+                </h3>
+            </div>
+            <div class="item-body">
+                <video src="movie.mp4" width="220" height="180" controls> 您的浏览器不支持Video标签</video>
+            </div>
+        </div>
+        <div class="news">
+            <div class="item-head">
+                <h3> <img src="icon.gif" alt="" width="20" height="20"><a href="#">新闻中心 </a>
+                    <i>News</i>
+                </h3>
+            </div>
+            <div class="item-body">
+                <ul>
+                    <li><a href="*">&bull; 这些风险你看到了吗？</a><i class="u-pubtime">11.16</i></li>
+                    <li><a href="*">&bull; 这些风险我没有看到。</a><i class="u-pubtime">11.16</i></li>
+                    <li><a href="*">&bull; 【瞩目全程】楼市缩水</a><i class="u-pubtime">11.16</i></li>
+                    <li><a href="*">&bull; “交通”——一个城市的命脉</a><i class="u-pubtime">11.16</i></li>
+                    <li><a href="*">&bull; “**杯”广场舞初赛全城启动</a><i class="u-pubtime">11.16</i></li>
+                    <li><a href="*">&bull; 离2019考研还有30天</a><i class="u-pubtime">11.16</i></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="ad">
+            <div class="item-head">
+                <h3> <img src="icon.gif" alt="" width="20" height="20"><a href="#">楼盘展示 </a>
+                    <i>LoupanZhanshi</i>
+                </h3>
+            </div>
+            <div class="item-body">
+                <img src="001.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="footer">
+        <a href="" class="footer1">什么东西看不清楚。第***号</a>
+        <a href="" class="footer2">
+            关于我们|联系我们|终于做完了
+        </a>
+        <select name="" id="">
+            <option>select1</option>
+            <option>select2</option>
+            <option>select3</option>
+            <option>select4</option>
+        </select>
+    </div>
+    <script>
+        function g(id) {
+            return document.getElementById(id);
+        }
+        window.onload = function () {
+            var next = g("next");
+            var list = g("list");
+            var pre = g("pre");
+            var buttons = g("buttons").getElementsByTagName("span");
+            var len = 4;
+            var index = 1;
+            var interval = 3000;
+            var animated = false;
+            var timer; //全局变量
+
+            /*按钮显示*/
+            function showButton() {
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].className == "on") {
+                        buttons[i].className = "";
+                        break;
+                    }
+                }
+                buttons[index - 1].className = "on";
+            }
+
+            /*图片切换动画*/
+            function animate(offset) {
+                if (offset == 0) {
+                    return;
+                }
+                animated = true;
+                var newLeft = parseInt(list.style.left) + offset;
+                var time = 300; //位移总时间
+                var interval = 10; //位移间隔时间
+                var speed = offset / (time / interval); //每次位移量
+                function go() {
+                    if ((speed < 0 && parseInt(list.style.left) > newLeft) || (speed > 0 && parseInt(list.style.left) < newLeft)) {
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go, interval);
+                    } else {
+                        list.style.left = newLeft + 'px';
+                        /*如果当前是第五张图，就跳到第一张图*/
+                        if (newLeft > -200) {
+                            list.style.left = -1200 * len + 'px';
+                        }
+                        if (newLeft < (-1200 * len)) {
+                            list.style.left = '-1200px';
+                        }
+                        animated = false;
+                    }
+                }
+                go();
+            }
+
+            next.onclick = function () {
+                if (index == 4) {
+                    index = 1;
+                } else {
+                    index += 1;
+                }
+                showButton()
+                if (!animated) {
+                    animate(-1200);
+                }
+            }
+            pre.onclick = function () {
+                if (index == 1) {
+                    index = 5;
+                } else {
+                    index -= 1;
+                }
+                showButton();
+                if (!animated) {
+                    animate(1200);
+                }
+            }
+
+            /*按钮切换*/
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                    if (animated) {
+                        return false;
+                    }
+                    if (this.className == "on") {
+                        return false;
+                    }
+                    var myIndex = parseInt(this.getAttribute("index"));
+                    var offset = 1200 * (myIndex - index);
+                    animate(offset);
+                    index = myIndex;
+                    showButton();
+                }
+            }
+
+            /*自动切换*/
+            function autoPlay() {
+                timer = setInterval(function () {
+                    next.onclick();
+                }, interval);
+            }
+
+            function stop() {
+                clearInterval(timer);
+            }
+
+            g("container").onmouseover = stop;
+            g("container").onmouseout = autoPlay;
+            autoPlay();
+        }
+    </script>
+</body>
+
+</html>

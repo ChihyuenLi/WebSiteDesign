@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+    margin: 0%;
+}
+
+.item{
+    width:15%;
+    background-color: #eeeeee;
+    display: inline-table;
+    text-emphasis-color: black;
+}
+.left{
+    position: absolute;
+    left: 10%;
+}
+.head{
+    background-color: aqua;
+}
+.head ,.body{
+    left: 3%;
+    max-width:60%;
+}
+
+.left{
+    position: absolute;
+    left: 10%;
+    max-width:70%;
+ 
+}
+.img{
+    position: absolute;
+    height:100%;
+    width:30%;
+}
+.right{
+    position: absolute;
+    left: 79%;
+}
+.jishu,.ad{
+    border-style:solid;
+    border-width:3px;
+    border-color:#555;
+}
+.img{
+
+    float:left;
+}
+.introduce {
+    float: right;
+    width: 50%;
+}
+.title{
+
+    text-align:center;
+}
