@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+.toper {
+	width: 100%;
+	padding: 10px;
+	height: 53px;
+	background: #01a6ea;
+}/*定义顶部固定区域的背景色和高度*/
+.color_white {
+	color: #fff;
+}/*设置栏目标题文字颜色*/
+.font20 {
+	font-size: 20px;
+}/*设置字体大小*/
+.photo_25 img {
+	height: 25px;
+	width: 25px;
+}/*设置图像大小*/
+.height53 {
+	width: 100%;
+	height: 53px;
+	line-height: 53px;
+	clear: both;
+}
+.homephoto img {
+	width: 100%;
+	height: 180px;
+}
+.height20 {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	clear: both;
+}
+.height60 {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	clear: both;
+}
+.cgray, a.cgray:link, a.cgray:visited {
+	color: #959595;
+	text-decoration: none; /*设置字体颜色为灰色*/
+}
+.cgray, a.cgray:hover {
+	color: #000000;/*灰色变黑*/
+}
+.photo_60 img {
+	height: 60px;
+	width: 60px;/*设置图像大小*/
+}
+/*广告位规则*/
+.adphoto img {
+	width: 100%;
+	height: 100px;
+}
+/*footer*/
+.footer {
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+	border-top: 1px solid #ccc;
+}
+.photo_30 img {
+	height: 30px;
+	width: 30px;
+}
+/*列表页*/
+.cwhite, a.cwhite:link, a.cwhite:visited {
+	color: #ffffff;
+	text-decoration: none;/*<纯白>*/
+}
+.cwhite, a.cwhite:hover {
+	color: #ffff00;/*<纯白变黄>*/
+}
+.font32 {
+	font-size: 32px;
+}
+/*<定义右侧图标导航>*/
+.icon_shopcar {
+	float: left;
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index: 1;
+}
+.icon_shopcar_ts {
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: -10px;
+	background: url(../images/icon_red.png) no-repeat top left;
+	z-index: 100;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}
+.sosophoto img {
+	width: 100%;
+	height: 140px;
+}/*设置缩略图图像大小*/
+.color_orange {
+	color: #f39800;
+}/*设置价格文字颜色*/
+.font16 {
+	font-size: 16px;
+}
+/*详细内容页*/
+
+.width100 {
+	width: 100%;
+	margin: 0 auto;
+}
+.bg_white {
+	background: #fff;
+}/*设置背景色*/
+.height10 {
+	width: 100%;
+	height: 10px;
+	line-height: 10px;
+	clear: both;
+}
+.hang32 {
+	line-height: 32px;
+}/*设置行高*/
+.border_top {
+	border-top: 1px solid #ccc;
+}/*设置一条灰色的线*/
+.color_gray {
+	color: #838383;
+}/*设置字体颜色*/
+.btn-blue {
+	color: #fff;
+	background-color: #01a6ea;
+	border-color: #01a6ea
+}
+/*-----login页面---------*/
+.formLogo {
+	background: #01a6ea;
+	height:260px;
+	overflow: hidden;
+}
+.photo_150 img {
+	height:150px;
+	width:150px;
+}
